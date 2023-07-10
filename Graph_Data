@@ -1,0 +1,8 @@
+<zml>
+  <layout>
+    <row>
+      <column width="100%">
+        <chart elementName="Chart" title='Graph' titleSize='20px' italicTitle='true' boldTitle='true' titleFontFamily='heuristica, tinos, times, serif' type='Scatter' bgColor='rgb(255, 255, 255)' theme='theme3' legendPos='center.top' appLinkName='thisapp' formLinkName='Credit_Evaluation_Form' xfield='Identity_Number' yfields='value:CGPA' /> </column>
+    </row>
+  </layout>
+</zml>
