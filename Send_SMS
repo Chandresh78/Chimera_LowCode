@@ -1,0 +1,20 @@
+Send_SMS as "Send SMS"
+{
+	type =  form
+	form = Register_As_Member
+	record event = on add
+
+	on success
+	{
+		actions 
+		{
+			sendsms
+			(
+				to : "${Mobile}"
+				message : "Form has been successfully submitted by the mail ${Email}."
+				connection : chandresh_rajpoot11
+			)
+		}
+	}
+
+}
