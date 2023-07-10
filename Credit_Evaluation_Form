@@ -1,0 +1,191 @@
+form Credit_Evaluation_Form
+{
+	displayname = "Credit Evaluation Form"
+	success message = "Credit Evaluation Added Successfully"
+	field alignment = left
+	Section1
+	(
+		type = section
+		displayname = ""
+	 	row = 1
+	 	column = 0   
+		width = medium
+	)
+	Register_As_Member1
+	(
+		type = picklist	
+		displayname = "Register As Member"
+		values  = Register_As_Member.ID
+    	displayformat = [Name.first_name1 + Name.last_name1]
+		sortorder = ascending
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Name_of_your_College
+	(
+		type = picklist
+		displayname = "Name of your College"
+		maxchar = 100
+		values = {"VIT Vellore","VIT Chennai","VIT AP","VIT Bhopal"}
+		others option = true
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Degree_Type
+	(
+		type = picklist
+		displayname = "Degree Type"
+		maxchar = 100
+		values = {"Under Graduate","Post Graduate"}
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Branch
+	(
+		type = picklist
+		maxchar = 100
+		values = {"B.Tech","B.Sc","BCA","B.Com","M.Tech","M.Sc","MCA","M.Com"}
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Domain
+	(
+		type = picklist
+		maxchar = 100
+		values = {"ECE","IT","CSE","EEE","Civil","Mechanical"}
+		others option = true
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Current_Semester
+	(
+		type = picklist
+		displayname = "Current Semester"
+		maxchar = 100
+		values = {"1st","2nd","3rd","4th","5th","6th","7th","8th"}
+		others option = true
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	ID_Card
+	(
+    	type = upload file
+		displayname = "ID Card"
+				browse = local_drive
+    	description
+    	[
+    		type = tooltip
+    	 	message = "Front Side of your Identity Card"
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have unique Identity_Number
+	(
+    	type = text
+		displayname = "Identity Number"
+    	description
+    	[
+    		type = tooltip
+    	 	message = "Please type your roll or registration number."
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	CGPA
+	(
+		type = decimal
+    	description
+    	[
+    		type = tooltip
+    	 	message = "On a 10-point scale only"
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+		personal data = true
+	)
+	Describe_Yourself1
+	(
+    	type = textarea
+		displayname = "Describe Yourself"
+		height = 80px
+	 	row = 1
+	 	column = 1   
+		width = small
+	)
+	Sentiment
+	(
+		type = picklist
+		maxchar = 100
+    	description
+    	[
+    		type = tooltip
+    	 	message = "Sentiment based on your description above."
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+		AI_Properties
+		(
+			fieldtype = SentimentAnalysis
+			basefield = Describe_Yourself1
+		)
+	)
+	Linkedin
+	(
+    	type = url
+		displayname = "LinkedIn Profile"
+		enable  linkname
+    	description
+    	[
+    		type = tooltip
+    	 	message = "Paste your Profile link here"
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	
+	actions
+	{
+		on add
+		{
+			submit
+			(
+   				type = submit
+   				displayname = "Submit"
+			)
+			reset
+			(
+   				type = reset
+   				displayname = "Reset"
+			)
+		}
+		on edit
+		{
+			update
+			(
+   				type = submit
+   				displayname = "Update"
+			)
+			cancel
+			(
+   				type = cancel
+   				displayname = "Cancel"
+			)
+		}
+	}
+	blueprint components
+	{
+		stages = {"User Registration","Basic Membership","Job Portal","Credit Support","Blog","Community","Priority Support","Extra Features","Premier Membership"}
+	}
+}
