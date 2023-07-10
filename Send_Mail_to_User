@@ -1,0 +1,14 @@
+Send_Mail_to_User as "Send Mail to User"
+{
+	type =  form
+	form = Register_As_Member
+	record event = on add
+
+	on success
+	{
+		actions  (Membership_Type == "Monthly Membership" || (Membership_Type == "Yearly Membership" && Monthly_Membership_plans == "Basic") || Monthly_Membership_plans == "Premier")
+		{
+			success message "Congratulations, you have been registered successfully.";
+		}
+	}
+
