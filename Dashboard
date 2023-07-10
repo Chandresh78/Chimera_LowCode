@@ -1,0 +1,86 @@
+<zml>
+  <layout>
+    <row>
+      <column width="100%">
+        <search elementName="Search" paddingTop='40px' paddingLeft='80px' paddingRight='80px' paddingBottom='40px' bgtype='none' bgColor='#e1bdf3' shape='rounded' resultComponent='report' linkName='Members' target='popup' criteriaString='Added_User is not null &amp;&amp; Added_Time is not null &amp;&amp; ID is not null' fontFamily='default' allowPublicAccess='true' appLinkName='thisapp' style='4' placeholder='Enter details' title='Records' titleSize='20px'>
+          <searchbar color="#000000" bgColor="#ffffff" fontSize="15px" />
+          <searchbutton color="#ffffff" bgColor="#c04ce8" fontSize="15px" />
+        </search>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <gauge elementName="Gauge" title='Paid Membership' titleSize='20px' color='#000000' size='20px' fontFamily='default' bgColor='#cfbffd' theme='rgba(147, 87, 251, 1)' displayType='actual' type='1' filledColor='rgba(147, 87, 251, 1)' nonFilledColor='#F5F5F5' needleColor='#000000' targetColor='#D8D8D8' value='thisapp.Register_As_Member.Monthly_Membership_plans.distinctCount' criteria='Monthly_Membership_plans == &quot;Premier&quot; &amp;&amp; Membership_Type == &quot;Yearly Membership&quot; || Membership_Type == &quot;Monthly Membership&quot;'>
+          <target size="15px" color="#7f7f7f" fontFamily="default" value="" bold="true" />
+          <maximumvalue size="15px" color="#000000" value="21" bold="true" /> </gauge>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <gauge elementName="Gauge 1" title='Basic Memberships' titleSize='20px' color='#000000' size='20px' fontFamily='default' bgColor='#e1bdf3' theme='rgba(147, 87, 251, 1)' displayType='actual' type='4' filledColor='rgba(147, 87, 251, 1)' nonFilledColor='#F5F5F5' value='thisapp.Register_As_Member.Monthly_Membership_plans.distinctCount' criteria='Membership_Type == &quot;Monthly Membership&quot; || (Membership_Type == &quot;Yearly Membership&quot; &amp;&amp; Monthly_Membership_plans == &quot;Basic&quot;)'>
+          <maximumvalue size="15px" color="#7F7F7F" value="21" /> </gauge>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel 1" title='Active Users' titleSize='20px'>
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#CFBFFD' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc>
+                  <pr>
+                    <pc>
+                      <text color='#833AF0' size='36px' bold='true' type='Form Data' bgColor='#CFBFFD' displayType='actual' thousandsSeperator='LOCALE' decimalSeperator='DOT' numberScale='none' value='thisapp.Register_As_Member.ID.count'> </text>
+                    </pc>
+                  </pr>
+                  <pr>
+                    <pc>
+                      <text color='#333333' size='16px' type='Text' bgColor='rgba(0, 0, 0, 0)' value='Number of Users'> </text>
+                    </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel" title='New Registeration' titleSize='20px'>
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#E1BDF3' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc padding='5px'>
+                  <pr width='fill' height='auto'>
+                    <pc width='100%'>
+                      <text size='20px' type='Text' value='Register As Member'> </text>
+                    </pc>
+                  </pr>
+                  <pr width='fill' height='auto'>
+                    <pc width='100%'>
+                      <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenForm' componentLinkName='Register_As_Member' target='popup' popupWidth='600px' popupHeight='800px' color='#FFFFFF' size='16px' text='Add Record' type='rounded' bgColor='#C462EA' cornerRadius='45.6px' /> </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel 2" title='Contact' titleSize='20px'>
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#CFBFFD' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc>
+                  <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenForm' componentLinkName='Contact_Us' target='new-window' color='#FFFFFF' size='16px' text='Contact Us' type='rounded' bgColor='#833AF0' cornerRadius='45.6px' /> </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+  </layout>
+</zml>
