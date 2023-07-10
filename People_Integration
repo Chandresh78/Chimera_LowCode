@@ -1,0 +1,11 @@
+list People_Integration()
+{
+	i_dept = List();
+	response = zoho.people.getRecords("Identity_Number");
+	info response;
+	for each  rec in response
+	{
+		i_dept.add(rec.getJSON("Identity_Number"));
+	}
+	return i_dept;
+}
