@@ -1,0 +1,114 @@
+list Members
+{
+	displayName = "Members"
+	show all rows from Register_As_Member    
+	(
+		Name 
+	 	(
+	      	displayformat = [first_name1+""+prefix1+""+last_name1+""+suffix1]
+	 	)
+		Monthly_Membership_plans as "Monthly Plans"
+		Heard_From as "How did you hear about us?"
+		Address 
+	 	(
+	      	displayformat = [address_line_11+""+address_line_21+""+district_city1+""+state_province1+""+postal_Code1+""+country1]
+	      	enable = Link_to_Map,Show_As_Text
+	 	)
+		Digital_signature as "Signature"
+		Email
+		Mobile
+		Membership_Type as "Membership Type"
+	)
+	filters
+	(
+		Membership_Type
+	)
+	quickview
+	(
+		layout
+		(
+			datablock1
+			(
+		     	title = "Overview"
+				fields
+				(
+					Name
+					Email
+					Mobile
+					Membership_Type as "Membership Type"
+					Monthly_Membership_plans as "Monthly Plans"
+					Heard_From as "How did you hear about us?"
+					Digital_signature as "Signature"
+				)
+			)
+		)
+
+		menu
+    	(
+    	 	header
+    	 	(
+    		 	Edit 
+    		 	Duplicate 
+    		 	Delete 
+    		 	Add 
+    		 	Print 
+    		 	Import 
+    		 	Export 
+    	 	)
+			record
+			(
+				Edit   	   
+				Duplicate   	   
+				Print   	   
+				Delete   	   
+    		)
+    	)
+    	action
+    	(
+			on click
+			(
+				View Record   	   
+    		)
+			on right click
+			(
+				Edit   	   
+				Delete   	   
+				Duplicate   	   
+				Print   	   
+				View Record   	   
+    		)
+     	)
+	)
+	detailview
+	(
+		layout
+		(
+			datablock1
+			(
+		     	title = "Overview"
+				fields
+				(
+					Name
+					Email
+					Mobile
+					Address
+					Membership_Type as "Membership Type"
+					Monthly_Membership_plans as "Monthly Plans"
+					Heard_From as "How did you hear about us?"
+					Digital_signature as "Signature"
+				)
+			)
+		)
+
+		menu
+    	(
+    	 	header
+    	 	(
+    		 	Edit 
+    		 	Duplicate 
+    		 	Print 
+    		 	Delete 
+    	 	)
+    	)
+	)
+}
