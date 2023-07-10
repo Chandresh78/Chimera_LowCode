@@ -1,0 +1,12 @@
+Email_Customer as "Email Customer"
+{
+	type =  form
+	form = Register_As_Member
+	record event = on edit
+
+	on success
+	{
+	}
+
+}
+
