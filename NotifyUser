@@ -1,0 +1,18 @@
+NotifyUser as "NotifyUser"
+{
+	type =  form
+	form = Extracurricular
+	record event = on add or edit
+
+	on success
+	{
+		actions 
+		{
+			custom deluge script
+			(
+					success message "Great, you have a nice list of activities involvment";
+			)
+		}
+	}
+
+}
