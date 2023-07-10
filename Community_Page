@@ -1,0 +1,119 @@
+<zml>
+  <layout>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel">
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#CFBFFD' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc padding='5px' vAlign='middle'>
+                  <pr>
+                    <pc>
+                      <text color='#444444' size='16px' bold='true' italic='true' fontFamily='heuristica, tinos, times, serif' type='Text' bgColor='rgba(0, 0, 0, 0)' value='Institute of Electrical and Electronics Engineers'> </text>
+                    </pc>
+                  </pr>
+                  <pr>
+                    <pc>
+                      <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenURL' url='https://www.ieee.org/' target='new-window' color='#FFFFFF' size='16px' bold='true' text='Click Here' type='rounded' bgColor='#9B69FB' cornerRadius='45.6px' /> </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel 1">
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#E1BDF3' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc padding='5px' vAlign='middle'>
+                  <pr>
+                    <pc>
+                      <text color='#444444' size='16px' bold='true' italic='true' fontFamily='heuristica, tinos, times, serif' type='Text' bgColor='rgba(0, 0, 0, 0)' value='IEEE Women in Engineering'> </text>
+                    </pc>
+                  </pr>
+                  <pr>
+                    <pc>
+                      <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenURL' url='https://www.ieee.org/membership/women/index.html' target='new-window' color='#FFFFFF' size='16px' text='Click Here' type='rounded' bgColor='#C462EA' cornerRadius='45.6px' /> </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel 2">
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#CFBFFD' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc padding='5px' vAlign='middle'>
+                  <pr>
+                    <pc>
+                      <text color='#444444' size='15px' bold='true' italic='true' fontFamily='heuristica, tinos, times, serif' type='Text' bgColor='rgba(0, 0, 0, 0)' value='Software Engineers Community'> </text>
+                    </pc>
+                  </pr>
+                  <pr>
+                    <pc>
+                      <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenURL' url='https://dev.to/' target='new-window' color='#FFFFFF' size='16px' text='Click Here' type='rounded' bgColor='#9B69FB' cornerRadius='45.6px' /> </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel 3">
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#E1BDF3' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc padding='5px' vAlign='middle'>
+                  <pr>
+                    <pc>
+                      <text color='#444444' size='15px' bold='true' italic='true' fontFamily='heuristica, tinos, times, serif' type='Text' bgColor='rgba(0, 0, 0, 0)' value='Mechanical Engineers Community'> </text>
+                    </pc>
+                  </pr>
+                  <pr>
+                    <pc>
+                      <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenURL' url='https://www.asme.org/' target='new-window' color='#FFFFFF' size='16px' text='Click Here' type='rounded' bgColor='#C462EA' cornerRadius='45.6px' /> </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+    <row>
+      <column width="100%">
+        <panel elementName="Panel 4">
+          <pr width='fill' height='fill'>
+            <pc padding='20px' bgColor='#CFBFFD' width='100%' hAlign='center' vAlign='middle'>
+              <pr width='auto' height='auto'>
+                <pc padding='5px' vAlign='middle'>
+                  <pr>
+                    <pc>
+                      <text color='#444444' size='15px' bold='true' italic='true' fontFamily='heuristica, tinos, times, serif' type='Text' bgColor='rgba(0, 0, 0, 0)' value='Civil Engineers Community'> </text>
+                    </pc>
+                  </pr>
+                  <pr>
+                    <pc>
+                      <button marginLeft='0px' marginRight='0px' marginBottom='0px' marginTop='0px' action='OpenURL' url='https://www.asce.org/' target='new-window' color='#FFFFFF' size='16px' text='Click Here' type='rounded' bgColor='#9B69FB' cornerRadius='45.6px' /> </pc>
+                  </pr>
+                </pc>
+              </pr>
+            </pc>
+          </pr>
+        </panel>
+      </column>
+    </row>
+  </layout>
+</zml>
