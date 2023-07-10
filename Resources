@@ -1,0 +1,20 @@
+<zml>
+  <layout>
+    <row>
+      <column width="100%">
+        <embed elementName="Embed" title='Soft Skills' titleSize='16px' italicTitle='true' boldTitle='true' titleFontFamily='heuristica, tinos, times, serif' hAlign='center' url='https://www.youtube.com/embed/HAnw168huqA' width='300' height='150' /> </column>
+    </row>
+    <row>
+      <column width="100%">
+        <embed elementName="Embed 1" title='Financial Knowledge' titleSize='16px' italicTitle='true' boldTitle='true' titleFontFamily='heuristica, tinos, times, serif' hAlign='center' url='https://www.youtube.com/embed/pWU3DYvnP0s' width='300' height='150' /> </column>
+    </row>
+    <row>
+      <column width="100%">
+        <embed elementName="Embed 2" title='Mental Health' titleSize='16px' italicTitle='true' boldTitle='true' titleFontFamily='heuristica, tinos, times, serif' hAlign='center' url='https://www.youtube.com/embed/JEtNxNW0bRU' width='300' height='150' /> </column>
+    </row>
+    <row>
+      <column width="100%">
+        <embed elementName="Embed 3" title='Geopolitics for Beginners' titleSize='16px' italicTitle='true' boldTitle='true' titleFontFamily='heuristica, tinos, times, serif' hAlign='center' url='https://www.youtube.com/embed/wRNzpb97cNs' width='300' height='150' /> </column>
+    </row>
+  </layout>
+</zml>
