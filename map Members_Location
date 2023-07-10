@@ -1,0 +1,123 @@
+map Members_Location
+{
+	displayName = "Members Location"
+	show all rows from Register_As_Member    
+	(
+		Name 
+	 	(
+	      	displayformat = [first_name1+""+prefix1+""+last_name1+""+suffix1]
+	 	)
+		Email
+		Mobile
+		(
+			encryption format = show all
+			displayformat = plainnumber 
+			linktodial = enable
+		)
+		Profile_Picture as "Profile Picture"
+		Address 
+	 	(
+	      	displayformat = [address_line_11+""+address_line_21+""+district_city1+""+state_province1+""+postal_Code1+""+country1]
+	      	enable = Link_to_Map,Show_As_Text
+	 	)
+		Membership_Type as "Membership Type"
+		Monthly_Membership_plans as "Membership plans"
+		Payment
+		Heard_From as "How did you hear about us?"
+		terms_of_service as "I agree to the terms of service."
+		Digital_signature as "Digital signature"
+	)
+	filters
+	(
+		Added_Time
+	)
+	options
+	(
+	 	display field = Address
+	 	 radius = 100 Miles
+	 )
+	conditional formatting
+	(
+		"Default"
+		{
+			format = "color:#f27d7d;map-icon:location-map-pin;map-icon-color:#000000;"
+		}
+	)
+	quickview
+	(
+		layout
+		(
+			datablock1
+			(
+				fields
+				(
+					Name
+					Email
+				)
+			)
+		)
+
+		menu
+    	(
+    	 	header
+    	 	(
+    		 	Edit 
+    		 	Duplicate 
+    		 	Delete 
+    	 	)
+			record
+			(
+				Edit   	   
+				Duplicate   	   
+				Delete   	   
+    		)
+    	)
+    	action
+    	(
+			on click
+			(
+				View Record   	   
+    		)
+			on right click
+			(
+				Edit   	   
+				Delete   	   
+				Duplicate   	   
+				View Record   	   
+    		)
+     	)
+	)
+	detailview
+	(
+		layout
+		(
+			datablock1
+			(
+				fields
+				(
+					Name
+					Email
+					Mobile
+					Profile_Picture as "Profile Picture"
+					Address
+					Membership_Type as "Membership Type"
+					Monthly_Membership_plans as "Membership plans"
+					Payment
+					Heard_From as "How did you hear about us?"
+					terms_of_service as "I agree to the terms of service."
+					Digital_signature as "Digital signature"
+				)
+			)
+		)
+
+		menu
+    	(
+    	 	header
+    	 	(
+    		 	Edit 
+    		 	Duplicate 
+    		 	Delete 
+    	 	)
+    	)
+	)
+}
