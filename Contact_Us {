@@ -1,0 +1,120 @@
+form Contact_Us
+{
+	displayname = "Contact Us"
+	success message = "Contact message sent successfully. We'll respond to you very soon.!"
+	field alignment = left
+	Section
+	(
+		type = section
+	 	row = 1
+	 	column = 0   
+		width = medium
+	)
+	Contact_us_about_anything_related_to_our_company_or_services
+	(
+    	type = plaintext
+		value = "Contact us about anything related to our company or services.<div><br /></div><div>We&#39;ll do our best to get back to you as soon as possible.</div>"
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Name
+	(
+    	type = name
+     	prefix1
+     	(
+	     	 type = prefix
+	     	 displayname ="Prefix"
+	     	 visibility = false
+	     	 value = {"Mr.","Mrs.","Ms."}
+     	) 
+     	first_name1
+     	(
+	     	 type = first_name
+	     	 displayname ="First Name"
+     	) 
+     	last_name1
+     	(
+	     	 type = last_name
+	     	 displayname ="Last Name"
+     	) 
+     	suffix1
+     	(
+	     	 type = suffix
+	     	 displayname ="Suffix"
+	     	 visibility = false
+     	) 
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Email
+	(
+    	type = email
+    	description
+    	[
+    		type = tooltip
+    	 	message = "Your Email ID where we can contact you."
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	Subject_field
+	(
+    	type = text
+		displayname = "Subject"
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Message
+	(
+    	type = richtext
+		height = 198px
+		toolbar = enable
+		[
+			style, strike-through, indent, font-color, background-color, remove-formatting, alignment, link, table, ruler, bullets-and-numbering, script-text, code, html, quote, 
+			font-size : {1, 2, 3, 4, 5, 6, 7},
+			font-family : {"Serif", "Arimo", "Ptmono", "Heuristica", "OpenSans", "Tinos", "Lato", "DejaVuSans", "ComicNeue"}
+		]
+    	description
+    	[
+    		type = tooltip
+    	 	message = "How can we help you?"
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	
+	actions
+	{
+		on add
+		{
+			submit
+			(
+   				type = submit
+   				displayname = "Send Message"
+			)
+			reset
+			(
+   				type = reset
+   				displayname = "Reset"
+			)
+		}
+		on edit
+		{
+			update
+			(
+   				type = submit
+   				displayname = "Update"
+			)
+			cancel
+			(
+   				type = cancel
+   				displayname = "Cancel"
+			)
+		}
+	}
+}
