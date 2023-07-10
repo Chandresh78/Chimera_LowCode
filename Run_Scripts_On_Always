@@ -1,0 +1,15 @@
+Run_Scripts_On_Always as "Run Scripts - On Always"
+{
+	type =  form
+	form = Register_As_Member
+	record event = on add or edit
+
+	field rules
+	{
+		actions  (Monthly_Membership_plans == "Basic")
+		{
+			hide Payment;
+		}
+	}
+
+}
