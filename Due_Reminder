@@ -1,0 +1,28 @@
+Due_Reminder as "Due Reminder"
+{
+	type =  schedule
+	form = Register_As_Member[Monthly_Membership_plans == "Premier(₹199)"]
+	start = after 6 hours from Added_Time
+	time zone = "Asia/Kolkata"
+	on start
+	{
+		actions  (Monthly_Membership_plans == "Premier")
+		{
+			sendsms
+			(
+				to : "${Mobile}"
+				message : "To make full use of our application feature please initiate the payment.\n\n\nTeam Chimera\n2023\n${zoho.adminuserid}"
+				connection : chandresh
+			)
+		}
+		actions 
+		{
+			sendsms
+			(
+				to : "${Mobile}"
+				message : "Have a look at what our resource page have for you.\nFrom Finance, Health or Academics everything on one platform"
+				connection : chandresh2
+			)
+		}
+	}
+}
