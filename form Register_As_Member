@@ -1,0 +1,230 @@
+form Register_As_Member
+{
+	displayname = "Register As Member"
+	success message = "Registration Completed Successfully!"
+	field alignment = right
+	feature property = 32
+	encrypt_ip = true
+	Section
+	(
+		type = section
+	 	row = 1
+	 	column = 0   
+		width = medium
+	)
+	must have Name
+	(
+    	type = name
+     	prefix1
+     	(
+	     	 type = prefix
+	     	 displayname ="Prefix"
+	     	 visibility = false
+	     	 value = {"Mr.","Mrs.","Ms."}
+     	) 
+     	first_name1
+     	(
+	     	 type = first_name
+	     	 displayname ="First Name"
+     	) 
+     	last_name1
+     	(
+	     	 type = last_name
+	     	 displayname ="Last Name"
+     	) 
+     	suffix1
+     	(
+	     	 type = suffix
+	     	 displayname ="Suffix"
+	     	 visibility = false
+     	) 
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	unique Email
+	(
+    	type = text
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Mobile
+	(
+    	type = phonenumber
+	 	row = 1
+	 	column = 1   
+		width = medium
+		personal data = true
+		isencrypted = true
+	)
+	must have Profile_Picture
+	(
+    	type = image
+		displayname = "Profile Picture"
+		annotation = true
+		source  = file
+		aspect ratio = original
+		camera = primary
+		preview duration = 0
+		show gallery = true
+		switch camera = true
+		submit onscan = true
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	Address
+	(
+    	type = address
+     	capture_coordinates = true
+     	adjust_using_map = true
+     	address_line_11
+     	(
+	     	  type = address_line_1
+	     	  displayname = "Address Line 1"
+     	) 
+     	address_line_21
+     	(
+	     	  type = address_line_2
+	     	  displayname = "Address Line 2"
+	     	 visibility = false
+     	) 
+     	district_city1
+     	(
+	     	  type = district_city
+	     	  displayname = "City / District"
+     	) 
+     	state_province1
+     	(
+	     	  type = state_province
+	     	  displayname = "State Province"
+     	) 
+     	postal_Code1
+     	(
+	     	  type = postal_Code
+	     	  displayname = "Postal Code"
+     	) 
+     	country1
+     	(
+	     	  type = country
+	     	  displayname = "Country"
+     	) 
+     	latitude1
+     	(
+	     	  type = latitude
+	     	  displayname = "latitude"
+	     	 visibility = false
+     	) 
+     	longitude1
+     	(
+	     	  type = longitude
+	     	  displayname = "longitude"
+	     	 visibility = false
+     	) 
+	 	row = 1
+	 	column = 1   
+		width = medium
+		personal data = true
+	)
+	must have Membership_Type
+	(
+		type = radiobuttons
+		displayname = "Membership Type"
+		values = {"Monthly Membership","Yearly Membership"}
+		initial value = "Monthly Membership"
+		layout = 2
+	 	row = 1
+	 	column = 1   
+		width = 300px
+	)
+	Monthly_Membership_plans
+	(
+		type = radiobuttons
+		displayname = "Membership plans"
+		values = {"Basic","Premier"}
+		layout = 3
+	 	row = 1
+	 	column = 1   
+		width = 300px
+	)
+	Payment
+	(
+		type = INR
+		format = commadotindian
+		initial value = 199
+    	description
+    	[
+    		type = tooltip
+    	 	message = "After clicking on Submit, you will be redirected to the payment gateway"
+    	]
+	 	row = 1
+	 	column = 1   
+		width = medium
+	)
+	must have Heard_From
+	(
+		type = picklist
+		displayname = "How did you hear about us?"
+		values = {"Social Media","Friend/Colleague","Others"}
+	 	row = 1
+	 	column = 1   
+		width = small
+	)
+	must have terms_of_service
+	(
+    	type = checkbox
+		displayname = "I agree to the terms of service."
+		initial value = false
+    	description
+    	[
+    		type = tooltip
+    	 	message = "By using our app, you agree to the following Terms & Conditions:\nEligibility: This application is for individuals aged 18 & above. Responsible Borrowing, Community Guidelines, Privacy and Security, Third-Party Services, Governing Law, Liability etc."
+    	]
+	 	row = 1
+	 	column = 1   
+		width = 300px
+	)
+	must have Digital_signature
+	(
+    	type = signature
+		displayname = "Digital signature"
+	 	row = 1
+	 	column = 1   
+		width = 300px
+	)
+	
+	actions
+	{
+		on add
+		{
+			submit
+			(
+   				type = submit
+   				displayname = "Submit"
+			)
+			reset
+			(
+   				type = reset
+   				displayname = "Reset"
+			)
+		}
+		on edit
+		{
+			update
+			(
+   				type = submit
+   				displayname = "Update"
+			)
+			cancel
+			(
+   				type = cancel
+   				displayname = "Cancel"
+			)
+		}
+	}
+	blueprint components
+	{
+		stages = {"Open Application","Filling Details","Choosing membership plans then submit by signature"}
+	}
+}
