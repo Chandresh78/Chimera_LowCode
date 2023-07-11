@@ -32,8 +32,5 @@ To enhance functionality and streamline communication, we integrated SMS and ema
 Code Repository:
 The source code for Chimera is available on GitHub. Interested individuals or organizations can access the code repository to review, contribute, and collaborate on further improvements and enhancements.
 
-Professional Profiles:
-For additional information, please refer to our professional profiles on LinkedIn. We maintain an online presence to showcase our achievements, projects, and expertise in developing innovative applications like Chimera.
-
 Conclusion:
 Chimera, our application developed during the ZOHO APP-A-THON, aims to address the financial challenges faced by students during their college years. By facilitating student lending communities, providing academic resources, job portals, community groups, and a blog section, Chimera empowers students to manage their finances effectively and access valuable resources for their personal and academic growth. The application's implementation using ZOHO Creator, integration of SMS and email services, and availability of the source code on GitHub showcase our technical proficiency and commitment to creating impactful solutions.
