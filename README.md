@@ -1,4 +1,4 @@
-# Chimera_LowCode
+# Chimera Web Application (built via ZOHO Creator)
 Introduction:
 We are proud to present "Chimera," an innovative application developed by myself and my friend, Suryansh Raj Pratap Singh. We participated in the ZOHO APP-A-THON and successfully created this application using ZOHO Creator. Chimera addresses a common problem faced by college and university students - managing their finances effectively within limited budgets.
 
